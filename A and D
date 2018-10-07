@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+#include <cstdlib>
+using namespace std;
+string a="";
+int i,k=0;
+int main()
+{
+    getline(cin,a);
+    for(i=0;i<a.length();i++){
+        if(a[i]=='A' or a[i]=='D') k++;
+    }
+   cout<<k<<endl;
+    return 0;
+}
