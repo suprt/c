@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+int N,ma,br,m=1009,x,z1,z2;
+int main()
+{int A[m];
+fill(A,A+m-1,0);
+ma=-1;
+    cin>>N;
+    for(int i=0;i<N;i++){
+    cin>>x;
+    if(x>A[x%m]){
+    A[x%m]=x;
+
+    }
+    if(x<A[1009-(x%m)]){
+        if(ma<(x+A[1009-(x%m)])){
+            ma=x+A[1009-(x%m)];
+        z1=x;
+        z2=A[1009-(x%m)];
+
+        }
+    }
+    }
+cout<<z2<<" "<<z1;
+    return 0;
+}
