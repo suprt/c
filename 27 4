@@ -13,11 +13,11 @@ ma=-1;
     A[x%m]=x;
 
     }
-    if(x<A[1009-(x%m)]){
-        if(ma<(x+A[1009-(x%m)])){
-            ma=x+A[1009-(x%m)];
+    if(x<A[m-(x%m)]){
+        if(ma<(x+A[m-(x%m)])){
+            ma=x+A[m-(x%m)];
         z1=x;
-        z2=A[1009-(x%m)];
+        z2=A[m-(x%m)];
 
         }
     }
