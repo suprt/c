@@ -1,24 +1,46 @@
 #include <iostream>
-
+ 
 using namespace std;
 int N,ma,br,m=1009,x,z1,z2;
 int main()
 {int A[m];
+br=-1;
 fill(A,A+m-1,0);
 ma=-1;
     cin>>N;
     for(int i=0;i<N;i++){
     cin>>x;
+    
+    if(x%m!=0){
+      
+    
     if(x>A[x%m]){
     A[x%m]=x;
-
+    }}else{
+      if(A[0]<x){
+        A[0]=x;
+         
+    } else{
+        if(x>br){
+          br=x;
+        }
+      }
+      
+        if(ma<(br+A[0])&&(br+A[0])%1009==0){
+            ma=br+A[0];
+        z1=br;
+        z2=A[0];
+        
     }
-    if(x<A[m-(x%m)]){
-        if(ma<(x+A[m-(x%m)])){
+        
+    }
+    
+    
+    if(x<=A[m-(x%m)]){
+        if(ma<(x+A[m-(x%m)])&&(x+A[m-(x%m)])%1009==0){
             ma=x+A[m-(x%m)];
         z1=x;
         z2=A[m-(x%m)];
-
         }
     }
     }
