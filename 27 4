@@ -26,7 +26,7 @@ ma=-1;
         }
       }
       
-        if(ma<(br+A[0])&&(br+A[0])%1009==0){
+        if(ma<(br+A[0])&&(br+A[0])%m==0){
             ma=br+A[0];
         z1=br;
         z2=A[0];
@@ -37,7 +37,7 @@ ma=-1;
     
     
     if(x<=A[m-(x%m)]){
-        if(ma<(x+A[m-(x%m)])&&(x+A[m-(x%m)])%1009==0){
+        if(ma<(x+A[m-(x%m)])&&(x+A[m-(x%m)])%m==0){
             ma=x+A[m-(x%m)];
         z1=x;
         z2=A[m-(x%m)];
